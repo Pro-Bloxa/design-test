@@ -1,0 +1,102 @@
+@mixin fontz($fw, $fs, $c, $lh)
+  font-weight: $fw
+  font-size: $fs
+  color: $c
+  line-height: $lh
+
+@mixin img-bg
+  background:
+    size: cover
+    repeat: no-repeat
+    position: center
+    color: #777C80
+
+@mixin mask-after
+  content: ""
+  background-color: #000000
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  opacity: 0.6
+
+@mixin before-after
+  content: ""
+  display: inline-block
+  background:
+    repeat: no-repeat
+    position: center
+    vertical-align: middle
+
+@mixin flexible
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+@mixin hidden
+  width: 1px
+  height: 1px
+  clip: rect(1px, 1px, 1px, 1px)
+  position: absolute
+
+@mixin visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  padding: 0
+  border: 0
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+@mixin appearance
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+
+// @mixin title
+//   font-size: 20px
+//   line-height: 1.2
+//   font-weight: 700
+//   text-transform: uppercase
+//   color: $color-text
+//   a
+//     color: $color-text
+
+@mixin title-line
+  content: ""
+  display: block
+  margin: 0 auto
+  margin-top: 10px
+  width: 50px
+  height: 2px
+  background-color: $color-green
+
+// @mixin title-aside
+//   font-size: 14px
+//   line-height: 1.28
+//   font-weight: 700
+//   text-transform: uppercase
+//   color: $color-text
+
+@mixin btn-white
+  display: inline-block
+  @include fontz(400, 16px, #ffffff, 1)
+  margin-top: 25px
+  border: 1px solid #ffffff
+  padding: 10px 20px
+  &:hover
+    background-color: rgba(255, 255, 255, .2)
+    transition: 0.9s
+
+@mixin btn-gray
+  display: inline-block
+  @include fontz(400, 16px, #ffffff, 1)
+  border: 1px solid $color-gris
+  padding: 8px 15px
+  text-transform: uppercase
+  background-color: $color-gris
+  &:hover
+    background-color: rgba(61, 111, 75, .8)
+    transition: 1.5s

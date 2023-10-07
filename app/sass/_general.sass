@@ -1,0 +1,290 @@
+body
+  font-family: Roboto, Arial, sans-serif
+
+.container
+  width: 964px
+  max-width: 100%
+  margin: 0 auto
+  padding-left: 7px
+  padding-right: 7px
+
+.title
+  padding-bottom: 15px
+  @include fontz(700, 25px, $color-gris-dark, 1)
+  text-transform: uppercase
+  text-align: center
+  &::after
+    @include title-line
+
+.button
+  @include btn-gray
+  margin-top: 8px
+
+.text
+  @include fontz(400, 16px, $color-gris, 1.6)
+// ======================================================HEADER
+
+.header
+  // position: fixed
+  // top: 0
+  // width: 100%
+  background-color: #ffffff
+  // z-index: 100
+  &-container
+    @include flexible
+    padding-top: 50px
+  &-fix
+    position: fixed
+    // top: 0
+    width: 100%
+    z-index: 100
+    background-color: rgba(232, 230, 230, 0.5)
+
+.logo
+  &-img
+    width: 191px
+
+.menu
+  &-items
+    display: flex
+  &-item
+    &:nth-child(n + 2)
+      margin-left: 20px
+  &-link
+    @include fontz(500, 16px, $color-gris, 1)
+    text-transform: uppercase
+    &:hover
+      color: $color-gris-dark
+      transition: color 0.6s
+    &:focus
+      color: $color-blue
+      transition: color 0.6s
+
+.tel
+  color: $color-gris
+  &::before
+    @include before-after
+    background:
+      image: url("../img/icons/phone.png")
+      size: 17px
+    width: 17px
+    height: 17px
+    margin-right: 7px
+    vertical-align: middle
+  &:hover
+    color: $color-gris-dark
+    transition: color 0.6s
+
+// ======================================================FIRST-SCREEN
+
+.main
+  padding-top: 35px
+
+.first-screen
+  min-height: 674px
+  @include img-bg
+  background-image: url("../img/foto/4.jpg")
+  &-box
+    padding-top: 160px
+    padding-left: 147px
+    text-transform: uppercase
+  &-subtitle
+    @include fontz(400, 22px, #ffffff, 1)
+  &-title
+    @include fontz(700, 40px, #ffffff, 1)
+    margin-top: 10px
+  &-link
+    @include btn-white
+
+// ======================================================SERVICES
+
+.services
+  margin-top: 30px
+  &-text
+    @include fontz(400, 16px, $color-gris, 1.6)
+  &-block
+    @include flexible
+    align-items: start
+    flex-wrap: wrap
+    margin-top: 30px
+  &-box
+    width: 100%
+    height: 280px
+    img
+      height: 100%
+      width: 105%
+      object-fit: cover
+    @include flexible
+    &__info
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: center
+      height: 100%
+      width: 100%
+      padding: 10px
+      border: 1px solid $color-gris
+    &__btn
+      color: #ffffff
+
+    // width: 30%
+    // max-width: 280px
+    // &:nth-child(n + 4)
+    //   margin-top: 22px
+  &-subtitle
+    @include fontz(400, 16px, $color-gris-dark, 1)
+    text-transform: uppercase
+    text-align: center
+  &-content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 100%
+    min-height: 235px
+    margin-top: 12px
+    padding-left: 26px
+    padding-bottom: 10px
+    background-color: #EEEEEE
+  &-lists
+    margin-top: 12px
+  &-list
+    @include fontz(400, 14px, $color-gris-dark, 1.26)
+    &-mark::before
+      @include before-after
+      background:
+        image: url("../img/icons/mark.png")
+        size: 11px
+      width: 11px
+      height: 11px
+      margin-right: 5px
+  &-price
+    align-self: end
+    padding-right: 11px
+    &::after
+      @include before-after
+      background:
+        image: url("../img/icons/Ellipse.png")
+        size: 10px
+      width: 10px
+      height: 10px
+      margin-left: 5px
+    &-link
+      @include fontz(700, 14px, $color-blue, 1)
+      text-transform: uppercase
+      &:hover
+        text-decoration: underline
+  &-extra
+    margin-top: 30px
+  &-item
+    margin-top: 15px
+    &__title
+      margin-bottom: 15px
+      @include fontz(500, 14px, $color-gris, 1)
+      text-transform: uppercase
+.buttons-box
+  @include flexible
+
+// ======================================================PORTFOLIO
+
+.portfolio
+  margin-top: 30px
+// ======================================================PROCESS
+
+.process
+  margin-top: 30px
+// ======================================================furniture
+
+.furniture
+  margin-top: 30px
+// ======================================================CONTACTS
+.contacts
+  margin-top: 30px
+  &-offer
+    margin-top: 30px
+    padding: 50px 40px
+    background-color: $color-gris-warm
+    &-box
+
+      @include flexible
+    &-text
+      @include fontz(400, 16px, $color-gris-dark, 1.6)
+    &-btn
+      @include btn-gray
+
+.map
+  width: 100%
+  margin-top: 30px
+
+// ======================================================FOOTER
+.footer
+  // height: 300px
+  background-color: $color-gris-warm
+.footer__block
+  padding-top: 30px
+  display: flex
+  justify-content: space-between
+  gap: 60px
+
+.footer-support
+  max-width: 380px
+
+.footer-name
+  margin-bottom: 24px
+  @include fontz(700, 24px, $color-gris-dark, 1)
+
+.footer-title
+  margin-bottom: 24px
+  @include fontz(500, 20px, $color-gris-dark, 1)
+
+.footer-item
+  margin-bottom: 12px
+  line-height: 1
+
+.footer-inputs
+  display: flex
+  gap: 0
+
+.footer-input
+  height: 48px
+  background-color: transparent
+  border: none
+  box-sizing: border-box
+
+.footer-input__email
+  width: 169px
+  padding-left: 16px
+  border-top: 1px solid $color-gris-light
+  border-left: 1px solid $color-gris-light
+  border-bottom: 1px solid $color-gris-light
+  border-radius: 4px 0 0 4px
+
+.footer-input__image
+  width: 48px
+  border-top: 1px solid $color-gris-light
+  border-right: 1px solid $color-gris-light
+  border-bottom: 1px solid $color-gris-light
+  border-radius: 0 4px 4px 0
+  background-position: center center
+  background-image: url("../img/icons/send-footer_grey.png")
+  background-size: 24px 24px
+  background-repeat: no-repeat
+  cursor: pointer
+
+.footer-copyright
+  padding-top: 16px
+  padding-bottom: 24px
+  border-top: 1px solid $color-gris-light
+  text-align: center
+
+.footer-copyright::before
+  content: ''
+  display: inline-block
+  width: 20px
+  height: 20px
+  background-image: url('../img/icons/icon-copyright-black.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: 20px
+  opacity: 0.4
+  vertical-align: middle
+  margin-right: 10px
